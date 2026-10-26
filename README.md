@@ -35,9 +35,12 @@ cd erp-system-v1
 ```
 
 ### 2. Configurar la Base de Datos
-1. Crea una base de datos llamada `erp_system` en tu MySQL.
-2. Importa el esquema SQL (está disponible en el código del proyecto).
-3. Edita el archivo `config/database.php` con tus credenciales:
+1. Importar el archivo `database.sql` incluido en la raíz del proyecto en tu gestor de MySQL (phpMyAdmin, MySQL Workbench, etc.):
+   ```bash
+   mysql -u tu_usuario -p < database.sql
+   ```
+2. Editar el archivo `config/database.php` con tus credenciales:
+
 ```php
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'erp_system');
